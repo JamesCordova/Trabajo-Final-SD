@@ -1,0 +1,28 @@
+# Intranet
+vpn.sdtif.cauc.lat {
+    reverse_proxy wg-vpn-server:80
+}
+
+# In-port to streaming services
+video.sdtif.cauc.lat {
+    reverse_proxy media-engine-server:1935
+}
+
+# Out-port to streaming services
+out-video.sdtif.cauc.lat {
+    reverse_proxy media-engine-server:3333
+}
+
+# Monitoring services
+grafana.sdtif.cauc.lat {
+    reverse_proxy grafana:3000
+}
+
+prometheus.sdtif.cauc.lat {
+    reverse_proxy prometheus:9090
+}
+
+# Media player server
+test.sdtif.cauc.lat {
+    reverse_proxy media-player-server:80
+}
