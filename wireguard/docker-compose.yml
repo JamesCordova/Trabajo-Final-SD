@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     container_name: wg-vpn-server
     ports:
-      - "80:80/udp"
+      - "53:53/udp"
       - "80:80/tcp"
     sysctls:
       net.ipv4.ip_forward: 1
