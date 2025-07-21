@@ -28,6 +28,9 @@ services:
     networks:
       - caddy_network
       - vpn_network
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
   ovenmediaplayer:
     image: airensoft/ovenplayerdemo:latest
     container_name: media-player-server
