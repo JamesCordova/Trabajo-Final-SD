@@ -7,11 +7,13 @@ services:
     restart: unless-stopped
     ports:
       - "1935:1935"
+      - "8081:8081"
       - "9999:9999"
       - "3333:3333"
       - "10000-10009:10000-10009"
-    # volumes:
-    #   - ./config:/config
+    volumes:
+     - ./bin/origin_conf/Server.xml:/opt/ovenmediaengine/bin/origin_conf/Server.xml:ro
+     - ./bin/edge_conf/Server.xml:/opt/ovenmediaengine/bin/edge_conf/Server.xml:ro
     #   - /var/log/ovenmediaengine:/var/log/ovenmediaengine
     environment:
       - OME_HOST_IP=192.168.1.254

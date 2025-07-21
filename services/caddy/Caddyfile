@@ -1,3 +1,5 @@
+# Cambie de acuerdo a sus DNS y servicios
+
 # Intranet
 vpn.sdtif.cauc.lat {
     reverse_proxy wg-vpn-server:80
