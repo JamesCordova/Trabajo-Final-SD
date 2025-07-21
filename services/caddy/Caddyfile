@@ -10,6 +10,10 @@ video.sdtif.cauc.lat {
     reverse_proxy media-engine-server:1935
 }
 
+video-api.sdtif.cauc.lat {
+    reverse_proxy media-engine-server:8081
+}
+
 # Out-port to streaming services
 out-video.sdtif.cauc.lat {
     reverse_proxy media-engine-server:3333
