@@ -22,9 +22,15 @@ services:
     env_file: .env
     networks:
       - caddy_network
+      - vpn_network
 
 networks:
   caddy_network:
     driver: bridge
     external: true
     name: caddy_network
+  
+  vpn_network:
+    driver: bridge
+    external: true
+    name: vpn_network
